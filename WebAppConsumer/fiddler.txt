@@ -1,0 +1,7 @@
+POST http://localhost:5001/api/Consomer
+{
+  "DataEventRecordId":3,
+  "Name":"Funny data",
+  "Description":"yes",
+  "Timestamp":"2015-12-27T08:31:35Z"   
+}

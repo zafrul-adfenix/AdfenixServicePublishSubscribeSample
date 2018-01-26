@@ -1,0 +1,34 @@
+networks:
+  mynetwork:
+    driver: bridge
+services:
+  postgresserver:
+    environment:
+      POSTGRES_PASSWORD: zafrul
+    image: zafrulpostgres
+    networks:
+      mynetwork: null
+    ports:
+    - 5432:5432/tcp
+    restart: always
+    volumes:
+    - pgdata:/var/lib/postgresql/data:rw
+  webappconsumer:
+    build:
+      context: D:\Docker\AdfenixSample\WebAppConsumer\WebAppConsumer
+      dockerfile: Dockerfile
+    depends_on:
+    - postgresserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webappconsumer
+    links:
+    - postgresserver
+    networks:
+      mynetwork: null
+    ports:
+    - 5001:80/tcp
+    - 80/tcp
+version: '3.0'
+volumes:
+  pgdata: {}

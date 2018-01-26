@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  postgresserver:
+    image: zafrulpostgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+        POSTGRES_PASSWORD: zafrul
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+  webappconsumer:
+    image: webappconsumer
+    ports:
+      - 5001:80
+    build:
+      context: ./WebAppConsumer
+      dockerfile: Dockerfile
+    links:
+    - postgresserver
+    depends_on:
+    - postgresserver
+    networks:
+    - mynetwork
+volumes:
+     pgdata:
+networks:
+   mynetwork:
+     driver: bridge
+
