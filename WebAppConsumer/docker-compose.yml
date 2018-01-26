@@ -23,11 +23,24 @@ services:
     - postgresserver
     depends_on:
     - postgresserver
+    - rabbitmq
     networks:
     - mynetwork
+  domainpublisherservice:
+    image: domainpublisherservice
+    build:
+      context: ./../DomainPublisherService
+      dockerfile: Dockerfile
+      depends_on:
+      - rabbitmq
+  rabbitmq:
+        image: "rabbitmq:3-management"
+        ports:
+            - "15672:15672"
 volumes:
      pgdata:
 networks:
    mynetwork:
      driver: bridge
+
 
