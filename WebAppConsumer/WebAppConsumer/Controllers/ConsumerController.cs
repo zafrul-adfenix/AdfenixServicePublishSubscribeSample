@@ -9,9 +9,9 @@ namespace WebAppConsumer.Controllers
     [Route("api/[controller]")]
     public class ConsumerController : Controller
     {
-        private readonly IDataAccessProvider _dataAccessProvider;
+        private readonly IDataEventRepository _dataAccessProvider;
 
-        public ConsumerController(IDataAccessProvider dataAccessProvider)
+        public ConsumerController(IDataEventRepository dataAccessProvider)
         {
             _dataAccessProvider = dataAccessProvider;
         }

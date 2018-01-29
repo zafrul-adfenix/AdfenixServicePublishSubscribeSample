@@ -31,7 +31,7 @@ namespace WebAppConsumer
                 options => options.UseNpgsql(sqlConnectionString)
             );
 
-            services.AddScoped<IDataAccessProvider, DataAccessPostgreSqlProvider>();
+            services.AddScoped<IDataEventRepository, DataEventRepository>();
 
             // Add framework services.
             services.AddMvc().AddJsonOptions(options =>

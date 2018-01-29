@@ -1,2 +1,0 @@
-D:\Docker\AdfenixSample\WebAppConsumer\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
-D:\Docker\AdfenixPublisherSubscribeSample\AdfenixServicePublishSubscribeSample\WebAppConsumer\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
