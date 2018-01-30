@@ -2,19 +2,23 @@
 using RabbitMQ.Client;
 using Newtonsoft.Json;
 using System.Text;
-using
 using System.Threading.Tasks;
 
 namespace DomainPublisherService
 {
     class Program
     {
-        static async Task Main(string[] args)
+        public static void Main(string[] args)
+        {
+            MainAsync().GetAwaiter().GetResult();
+        }
+
+        public static async Task  MainAsync()
         {
             RabbitSettings service = new RabbitSettings();
+
             // The RabbitMQ container starts before endpoints but it may
             // take several seconds for the broker to become reachable.
-
             await WaiForRabbitStart.WaitForRabbitToStart()
                 .ConfigureAwait(false);
 
@@ -22,7 +26,7 @@ namespace DomainPublisherService
             IModel model = connection.CreateModel();
             model.QueueDeclare(RabbitSettings.SerialisationQueueName, true, false, false, null);
 
-            SendSerializedObject(model);           
+            SendSerializedObject(model);
         }
 
         private static void SetupSerialisationMessageQueue(IModel model)

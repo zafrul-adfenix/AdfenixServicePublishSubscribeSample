@@ -13,7 +13,9 @@ namespace DomainPublisherService
         {
             var factory = new ConnectionFactory
             {
-                Uri =  new Uri("amqp://rabbitmq")
+                HostName = "rabbitmq",
+                Password = "guest",
+                UserName = "guest"
             };
             for (var i = 0; i < 5; i++)
             {

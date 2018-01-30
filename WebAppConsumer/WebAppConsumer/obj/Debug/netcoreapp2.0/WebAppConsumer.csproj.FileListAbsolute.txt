@@ -25,9 +25,9 @@ D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\b
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\bin\Debug\netcoreapp2.0\WebAppConsumer.runtimeconfig.dev.json
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\bin\Debug\netcoreapp2.0\WebAppConsumer.dll
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\bin\Debug\netcoreapp2.0\WebAppConsumer.pdb
-D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.csprojResolveAssemblyReference.cache
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.csproj.CoreCompileInputs.cache
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.AssemblyInfoInputs.cache
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.AssemblyInfo.cs
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.dll
 D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.pdb
+D:\Projects\AdfenixServicePublishSubscribeSample\WebAppConsumer\WebAppConsumer\obj\Debug\netcoreapp2.0\WebAppConsumer.csprojResolveAssemblyReference.cache

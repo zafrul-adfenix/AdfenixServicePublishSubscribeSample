@@ -25,11 +25,11 @@ namespace WebAppConsumer
         public override int SaveChanges()
         {
             ChangeTracker.DetectChanges();            
-            updateUpdatedProperty<DataEventRecord>();
+            UpdatedProperty<DataEventRecord>();
             return base.SaveChanges();
         }
 
-        private void updateUpdatedProperty<T>() where T : class
+        private void UpdatedProperty<T>() where T : class
         {
             var modifiedSourceInfo =
                 ChangeTracker.Entries<T>()

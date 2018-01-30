@@ -22,6 +22,13 @@ namespace WebAppConsumer.Controllers
             return _dataAccessProvider.GetDataEventRecord(id);
         }
 
+        // GET api/values
+        [HttpGet]
+        public IList<DataEventRecord> Get()
+        {
+            return _dataAccessProvider.GetDataEventRecords();
+        }
+
         [HttpPost]
         public void Post([FromBody]DataEventRecord value)
         {

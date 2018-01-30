@@ -2,18 +2,20 @@ version: '3'
 
 services:
   postgresserver:
-    image: zafrulpostgres
+    image: "postgres"
     restart: always
-    ports:
-      - 5432:5432
     environment:
-        POSTGRES_PASSWORD: zafrul
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test   
+    ports:
+      - 5432:5432    
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
       - mynetwork
   webappconsumer:
     image: webappconsumer
+    restart: always
     ports:
       - 5001:80
     build:
@@ -28,19 +30,24 @@ services:
     - mynetwork
   domainpublisherservice:
     image: domainpublisherservice
+    restart: always
     build:
       context: ./../DomainPublisherService
       dockerfile: Dockerfile
     depends_on:
     - rabbitmq
+    networks:
+    - mynetwork
   rabbitmq:
-        image: "rabbitmq:3-management"
-        ports:
-            - "15672:15672"
+    image: "rabbitmq:3-management"
+    ports:
+      - "1567:15672"
+    networks:
+      - mynetwork
 volumes:
-     pgdata:
+ pgdata:
 networks:
-   mynetwork:
-     driver: bridge
+  mynetwork:
+    driver: bridge
 
 
