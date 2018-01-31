@@ -8,17 +8,17 @@ namespace WebAppConsumer
     public class DomainModelPostgreSqlContext : DbContext
     {
         public DomainModelPostgreSqlContext(DbContextOptions<DomainModelPostgreSqlContext> options) :base(options)
-        {
+        {  
             this.Database.EnsureCreated();
         }
         
         public DbSet<DataEventRecord> DataEventRecords { get; set; }
-        
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<DataEventRecord>().HasKey(m => m.DataEventRecordId);           
-            builder.Entity<DataEventRecord>().Property<DateTime>("UpdatedTimestamp");            
+            builder.Entity<DataEventRecord>().HasKey(m => m.DataEventRecordId);
+            builder.Entity<DataEventRecord>().Property<DateTime>("UpdatedTimestamp");
             base.OnModelCreating(builder);
         }
 

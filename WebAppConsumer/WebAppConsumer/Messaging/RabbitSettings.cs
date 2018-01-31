@@ -11,7 +11,7 @@ namespace Messaging
         {
             get
             {
-                return "localhost";
+                return "rabbitmq";
             }
         }
         public string _userName

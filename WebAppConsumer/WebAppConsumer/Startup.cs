@@ -39,7 +39,7 @@ namespace WebApplication1
             services.AddDbContext<DomainModelPostgreSqlContext>(options =>
                 options.UseNpgsql(sqlConnectionString)
             );
-            services.AddScoped<IDataEventRepository, DataEventRepository>();
+            services.AddTransient<IDataEventRepository, DataEventRepository>();
             services.AddScoped<IHostedService, RabbitHostedService>();
             services.AddScoped<IRabbitConsume, RabbitConsume>();
             
